@@ -87,7 +87,7 @@ export default function WhyChooseUs() {
               }}
             />
             <div className="relative">
-              <div className="text-[3.4rem] font-bold leading-none tracking-[-0.03em] text-white">100%</div>
+              <div className="text-[2rem] lg:text-[3rem] font-bold leading-none tracking-[-0.03em] text-white">100%</div>
               <div className="mt-1.5 text-sm font-medium text-white/60">
                 Compliance-ready, filed on time, every time
               </div>
@@ -97,7 +97,7 @@ export default function WhyChooseUs() {
               <div className="flex justify-between gap-5">
                 {stats.map((stat) => (
                   <div key={stat.label} className="flex-1">
-                    <b className="block text-2xl font-bold">{stat.label}</b>
+                    <b className="block text-xl font-bold">{stat.label}</b>
                     <span className="text-[12.5px] font-medium text-white/60">{stat.caption}</span>
                   </div>
                 ))}

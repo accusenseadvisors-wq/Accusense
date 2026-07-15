@@ -4,6 +4,14 @@ import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import Process from "@/components/home/Process";
 import Reviews from "@/components/home/Reviews";
 import CTA from "@/components/shared/CTA";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Accusense Advisors — Chartered Accounting, Tax & Advisory",
+  description:
+    "Accusense Advisors delivers expert accounting, bookkeeping, tax, advisory, and corporate services to help businesses manage finances, stay compliant, and grow with confidence.",
+  path: "/",
+});
 
 export default function Home() {
   return (

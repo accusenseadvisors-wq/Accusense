@@ -3,11 +3,13 @@ import TaxationInfo from "@/components/services/TaxationInfo";
 import CTA from "@/components/shared/CTA";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import ContactSection from "@/components/shared/ContactSection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Taxation Services — Accusense Advisors",
+export const metadata = pageMetadata({
+  title: "Taxation Services",
   description: "Tax handled properly — filed on time, and never a rupee more than owed.",
-};
+  path: "/services/taxation",
+});
 
 export default function TaxationPage() {
   return (

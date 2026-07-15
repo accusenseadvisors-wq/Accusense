@@ -3,11 +3,13 @@ import ErpConsultancyInfo from "@/components/services/ErpConsultancyInfo";
 import CTA from "@/components/shared/CTA";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import ContactSection from "@/components/shared/ContactSection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "ERP Consultancy — Accusense Advisors",
+export const metadata = pageMetadata({
+  title: "ERP Consultancy",
   description: "Systems that fit how your business actually runs.",
-};
+  path: "/services/erp-consultancy",
+});
 
 export default function ErpConsultancyPage() {
   return (

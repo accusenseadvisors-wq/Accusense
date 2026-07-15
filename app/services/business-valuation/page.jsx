@@ -3,11 +3,14 @@ import BusinessValuationInfo from "@/components/services/BusinessValuationInfo";
 import CTA from "@/components/shared/CTA";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import ContactSection from "@/components/shared/ContactSection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Business Valuation — Accusense Advisors",
-  description: "Independent, reliable, and professional business valuation services to help you make informed decisions with confidence.",
-};
+export const metadata = pageMetadata({
+  title: "Business Valuation Services",
+  description:
+    "Independent, reliable, and professional business valuation services to help you make informed decisions with confidence.",
+  path: "/services/business-valuation",
+});
 
 export default function BusinessValuationPage() {
   return (

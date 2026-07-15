@@ -82,7 +82,7 @@ export default function CTA({
               </Link>
             </motion.div>
             <motion.div variants={item} className="mt-5.5 text-sm font-medium text-white/55">
-              Or email us at hello@accusense.co — we reply within one business day.
+              Or email us at contact@accusenseadvisor.com — we reply within one business day.
             </motion.div>
           </motion.div>
         </motion.div>

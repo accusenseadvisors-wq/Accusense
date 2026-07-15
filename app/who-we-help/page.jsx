@@ -2,12 +2,14 @@ import PageHero from "@/components/shared/PageHero";
 import WhoWeHelp from "@/components/who-we-help/WhoWeHelp";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import CTA from "@/components/shared/CTA";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Who We Help — Accusense Advisors",
+export const metadata = pageMetadata({
+  title: "Who We Help",
   description:
     "Financial expertise tailored to every stage of your business — from entrepreneurs to finance leaders and expanding investors.",
-};
+  path: "/who-we-help",
+});
 
 export default function WhoWeHelpPage() {
   return (

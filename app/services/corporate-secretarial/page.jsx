@@ -3,11 +3,13 @@ import CorporateSecretarialInfo from "@/components/services/CorporateSecretarial
 import CTA from "@/components/shared/CTA";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import ContactSection from "@/components/shared/ContactSection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Corporate & Secretarial — Accusense Advisors",
+export const metadata = pageMetadata({
+  title: "Corporate & Secretarial Services",
   description: "Stay compliant with every regulator, without lifting a finger.",
-};
+  path: "/services/corporate-secretarial",
+});
 
 export default function CorporateSecretarialPage() {
   return (

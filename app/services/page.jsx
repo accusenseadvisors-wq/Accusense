@@ -2,12 +2,14 @@ import PageHero from "@/components/shared/PageHero";
 import Services from "@/components/shared/Services";
 import WhyServicesStandOut from "@/components/services/WhyServicesStandOut";
 import CTA from "@/components/shared/CTA";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Services — Accusense Advisors",
+export const metadata = pageMetadata({
+  title: "Our Services",
   description:
     "From day-to-day bookkeeping to strategic advisory, we cover the full financial picture — so you can focus on running your business.",
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

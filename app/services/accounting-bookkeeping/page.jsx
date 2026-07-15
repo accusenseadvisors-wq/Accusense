@@ -3,12 +3,13 @@ import AccountingBookkeepingInfo from "@/components/services/AccountingBookkeepi
 import CTA from "@/components/shared/CTA";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import ContactSection from "@/components/shared/ContactSection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Accounting & Bookkeeping — Accusense Advisors",
-  description:
-    "Accurate, current books — reconciled, reported, and ready whenever you need them.",
-};
+export const metadata = pageMetadata({
+  title: "Accounting & Bookkeeping Services",
+  description: "Accurate, current books — reconciled, reported, and ready whenever you need them.",
+  path: "/services/accounting-bookkeeping",
+});
 
 export default function AccountingBookkeepingPage() {
   return (

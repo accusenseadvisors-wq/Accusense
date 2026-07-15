@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { FiArrowRight, FiHome } from "react-icons/fi";
 
+export const metadata = {
+  title: "Page Not Found",
+  robots: { index: false, follow: false },
+};
+
 export default function NotFound() {
   return (
     <section className="relative flex flex-1 items-center overflow-hidden py-24 sm:py-32">

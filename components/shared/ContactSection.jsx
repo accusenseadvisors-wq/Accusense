@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { FiPhone, FiMail, FiMapPin, FiShield, FiArrowRight, FiCheck } from "react-icons/fi";
+import { FiPhone, FiMail, FiMapPin, FiShield, FiArrowRight, FiCheck, FiAlertCircle } from "react-icons/fi";
+
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 const channels = [
   { icon: FiPhone, label: "Call us", value: "+92 000 000 0000", href: "tel:+920000000000" },
-  { icon: FiMail, label: "Email us", value: "hello@accusense.co", href: "mailto:hello@accusense.co" },
+  { icon: FiMail, label: "Email us", value: "contact@accusenseadvisor.com", href: "mailto:contact@accusenseadvisor.com" },
   { icon: FiMapPin, label: "Visit us", value: "Lahore, Pakistan", href: null },
 ];
 
@@ -21,11 +23,38 @@ const item = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transiti
 const panel = { hidden: { opacity: 0, y: 28, scale: 0.98 }, show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } } };
 
 export default function ContactSection() {
+  const formRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError("");
+    setSubmitting(true);
+
+    const formData = new FormData(formRef.current);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY ?? "");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        formRef.current.reset();
+      } else {
+        setError(result.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Couldn't send your message. Please check your connection and try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -153,11 +182,16 @@ export default function ContactSection() {
                     Fill in the form and we&apos;ll get back to you within one business day.
                   </p>
 
-                  <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  <form ref={formRef} onSubmit={handleSubmit} className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+                    <input type="hidden" name="subject" value="New enquiry from the Accusense website" />
+                    <input type="hidden" name="from_name" value="Accusense Advisors Website" />
+
                     <label className="flex flex-col gap-2">
                       <span className="text-[12.5px] font-semibold text-[#1a1a1a]">First name</span>
                       <input
                         type="text"
+                        name="first_name"
                         required
                         placeholder="Jane"
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 placeholder:text-[#1a1a1a]/35 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
@@ -167,6 +201,7 @@ export default function ContactSection() {
                       <span className="text-[12.5px] font-semibold text-[#1a1a1a]">Last name</span>
                       <input
                         type="text"
+                        name="last_name"
                         required
                         placeholder="Doe"
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 placeholder:text-[#1a1a1a]/35 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
@@ -176,6 +211,7 @@ export default function ContactSection() {
                       <span className="text-[12.5px] font-semibold text-[#1a1a1a]">Email address</span>
                       <input
                         type="email"
+                        name="email"
                         required
                         placeholder="jane@company.com"
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 placeholder:text-[#1a1a1a]/35 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
@@ -185,6 +221,7 @@ export default function ContactSection() {
                       <span className="text-[12.5px] font-semibold text-[#1a1a1a]">Phone (optional)</span>
                       <input
                         type="tel"
+                        name="phone"
                         placeholder="+92 000 000 0000"
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 placeholder:text-[#1a1a1a]/35 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
                       />
@@ -192,6 +229,7 @@ export default function ContactSection() {
                     <label className="flex flex-col gap-2 sm:col-span-2">
                       <span className="text-[12.5px] font-semibold text-[#1a1a1a]">What can we help with?</span>
                       <select
+                        name="service"
                         defaultValue="Accounting & Bookkeeping"
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
                       >
@@ -207,6 +245,7 @@ export default function ContactSection() {
                     <label className="flex flex-col gap-2 sm:col-span-2">
                       <span className="text-[12.5px] font-semibold text-[#1a1a1a]">Your message</span>
                       <textarea
+                        name="message"
                         required
                         rows={10}
                         placeholder="Tell us a little about your business and what you need…"
@@ -214,12 +253,20 @@ export default function ContactSection() {
                       />
                     </label>
 
+                    {error && (
+                      <div className="flex items-center gap-2 rounded-[9px] border border-accent/30 bg-accent/5 px-3.75 py-3 text-[13.5px] font-medium text-accent sm:col-span-2">
+                        <FiAlertCircle className="h-4 w-4 shrink-0" />
+                        {error}
+                      </div>
+                    )}
+
                     <div className="flex flex-wrap items-center justify-between gap-4.5 sm:col-span-2">
                       <button
                         type="submit"
-                        className="btn inline-flex items-center gap-2.5 rounded bg-accent px-7 py-3.5 text-sm text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e11020]"
+                        disabled={submitting}
+                        className="btn inline-flex items-center gap-2.5 rounded bg-accent px-7 py-3.5 text-sm text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e11020] disabled:pointer-events-none disabled:opacity-60"
                       >
-                        Send message
+                        {submitting ? "Sending…" : "Send message"}
                         <FiArrowRight className="h-4 w-4" />
                       </button>
                       <span className="inline-flex items-center gap-2 text-[13px] font-medium text-muted">

@@ -3,11 +3,13 @@ import AdvisoryInfo from "@/components/services/AdvisoryInfo";
 import CTA from "@/components/shared/CTA";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import ContactSection from "@/components/shared/ContactSection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Advisory Services — Accusense Advisors",
+export const metadata = pageMetadata({
+  title: "Advisory Services",
   description: "The financial second opinion behind your biggest business decisions.",
-};
+  path: "/services/advisory",
+});
 
 export default function AdvisoryPage() {
   return (

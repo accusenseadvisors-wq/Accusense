@@ -25,9 +25,9 @@ const useFullLinks = [
 ];
 
 const socials = [
-  { label: "LinkedIn", icon: FaLinkedinIn, href: "https://linkedin.com" },
-  { label: "X", icon: FaXTwitter, href: "https://x.com" },
-  { label: "Email", icon: FiMail, href: "mailto:hello@accusense.co" },
+  // { label: "LinkedIn", icon: FaLinkedinIn, href: "https://linkedin.com" },
+  // { label: "X", icon: FaXTwitter, href: "https://x.com" },
+  { label: "Email", icon: FiMail, href: "mailto:contact@accusenseadvisor.com" },
 ];
 
 function FooterHeading({ children }) {
@@ -152,8 +152,8 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2.5 text-[14.5px] font-medium leading-normal text-[#1a1a1a]/60">
                 <FiMail className="mt-0.75 h-4 w-4 shrink-0 text-accent" />
-                <a href="mailto:hello@accusense.co" className="transition-colors duration-200 hover:text-[#1a1a1a]">
-                  hello@accusense.co
+                <a href="mailto:contact@accusenseadvisor.com" className="transition-colors duration-200 hover:text-[#1a1a1a]">
+                  contact@accusenseadvisor.com
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-[14.5px] font-medium leading-normal text-[#1a1a1a]/60">

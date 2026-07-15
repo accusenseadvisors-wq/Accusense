@@ -1,6 +1,5 @@
 'use client'
 import {useEffect, useState} from 'react';
-import { BiArrowToTop } from 'react-icons/bi';
 import { BsArrowUp } from 'react-icons/bs';
 
 const ScrollToTop = () => {
@@ -27,7 +26,7 @@ const ScrollToTop = () => {
         <button
             type="button"
             onClick={scrollToTop}
-            className="fixed bottom-4 right-4 z-50 p-3 rounded-full bg-accent text-white shadow-lg"
+            className="fixed bottom-4 cursor-pointer right-4 z-50 p-3 rounded-full bg-accent text-white shadow-lg"
         >
             <BsArrowUp size={24} />
         </button>

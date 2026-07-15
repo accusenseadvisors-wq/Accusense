@@ -3,12 +3,14 @@ import OurStory from "@/components/about/OurStory";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import OurValues from "@/components/about/OurValues";
 import CTA from "@/components/shared/CTA";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "About Us — Accusense Advisors",
+export const metadata = pageMetadata({
+  title: "About Us",
   description:
     "We're Accusense — a chartered accounting practice built to do things properly: precise, transparent, and genuinely on your side.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
