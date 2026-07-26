@@ -127,23 +127,20 @@ export default function ContactSection() {
 
             <motion.div
               variants={item}
-              className="relative mt-6.5 h-37.5 overflow-hidden rounded-xl border border-line bg-paper"
+              className="relative mt-6.5 h-37.5 overflow-hidden rounded-xl border border-line"
             >
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(26,26,26,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(26,26,26,0.05) 1px, transparent 1px)",
-                  backgroundSize: "30px 30px",
-                }}
-                aria-hidden="true"
+              <iframe
+                src="https://www.google.com/maps?q=Lahore,Pakistan&z=12&output=embed"
+                title="Accusense Advisors location — Lahore, Pakistan"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 h-full w-full grayscale contrast-125 transition-all duration-500 hover:grayscale-0"
+                style={{ border: 0 }}
               />
-              <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-full flex-col items-center gap-1.5">
-                <span className="h-4.5 w-4.5 rotate-[-45deg] rounded-[50%_50%_50%_0] bg-accent shadow-[0_6px_16px_-4px_rgba(208,11,20,0.6)]" />
-                <span className="translate-y-1.5 whitespace-nowrap rounded-full bg-[#1a1a1a] px-2.5 py-1 text-xs font-semibold text-white">
-                  Accusense Advisor
-                </span>
-              </div>
+              <span className="pointer-events-none absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-[#1a1a1a] px-2.5 py-1 text-xs font-semibold text-white shadow-[0_6px_16px_-4px_rgba(26,26,26,0.5)]">
+                <FiMapPin className="h-3 w-3 text-accent" />
+                Lahore, Pakistan
+              </span>
             </motion.div>
           </motion.div>
 
