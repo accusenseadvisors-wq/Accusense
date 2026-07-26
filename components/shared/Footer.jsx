@@ -16,11 +16,11 @@ const serviceLinks = [
 ];
 
 const useFullLinks = [
-  { label: "About us", href: "/about" },
-  { label: "Who We Help", href: "/who-we-help" },
   { label: "PSEB", href: "https://techdestination.com/" },
   { label: "FBR", href: "https://www.fbr.gov.pk/" },
   { label: "SECP", href: "https://www.secp.gov.pk/" },
+  { label: "About us", href: "/about" },
+  { label: "Who We Help", href: "/who-we-help" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -146,8 +146,8 @@ export default function Footer() {
             <ul className="flex flex-col gap-3.5">
               <li className="flex items-start gap-2.5 text-[14.5px] font-medium leading-normal text-[#1a1a1a]/60">
                 <FiPhone className="mt-0.75 h-4 w-4 shrink-0 text-accent" />
-                <a href="tel:+920000000000" className="transition-colors duration-200 hover:text-[#1a1a1a]">
-                  +92 000 000 0000
+                <a href="tel:+923042024999" className="transition-colors duration-200 hover:text-[#1a1a1a]">
+                  0304 2024999
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-[14.5px] font-medium leading-normal text-[#1a1a1a]/60">

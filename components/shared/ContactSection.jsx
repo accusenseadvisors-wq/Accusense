@@ -7,7 +7,7 @@ import { FiPhone, FiMail, FiMapPin, FiShield, FiArrowRight, FiCheck, FiAlertCirc
 const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 const channels = [
-  { icon: FiPhone, label: "Call us", value: "+92 000 000 0000", href: "tel:+920000000000" },
+  { icon: FiPhone, label: "Call us", value: "0304 2024999", href: "tel:+923042024999" },
   { icon: FiMail, label: "Email us", value: "contact@accusenseadvisor.com", href: "mailto:contact@accusenseadvisor.com" },
   { icon: FiMapPin, label: "Visit us", value: "Lahore, Pakistan", href: null },
 ];
@@ -193,7 +193,7 @@ export default function ContactSection() {
                         type="text"
                         name="first_name"
                         required
-                        placeholder="Jane"
+                        placeholder="First Name"
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 placeholder:text-[#1a1a1a]/35 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
                       />
                     </label>
@@ -203,7 +203,7 @@ export default function ContactSection() {
                         type="text"
                         name="last_name"
                         required
-                        placeholder="Doe"
+                        placeholder="Last Name"
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 placeholder:text-[#1a1a1a]/35 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
                       />
                     </label>
@@ -213,7 +213,7 @@ export default function ContactSection() {
                         type="email"
                         name="email"
                         required
-                        placeholder="jane@company.com"
+                        placeholder="john@example.com"
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 placeholder:text-[#1a1a1a]/35 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
                       />
                     </label>
@@ -222,7 +222,8 @@ export default function ContactSection() {
                       <input
                         type="tel"
                         name="phone"
-                        placeholder="+92 000 000 0000"
+                        placeholder="03XX XXX XXXX"
+                        maxLength={11}
                         className="w-full rounded-[9px] border border-line bg-paper px-3.75 py-3.25 text-[15px] text-[#1a1a1a] transition-all duration-200 placeholder:text-[#1a1a1a]/35 focus:border-accent focus:bg-white focus:outline-none focus:ring-3 focus:ring-accent/10"
                       />
                     </label>
