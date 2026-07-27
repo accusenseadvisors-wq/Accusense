@@ -20,7 +20,7 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const SITE_TITLE = "Accusense Advisors — Chartered Accounting, Tax & Advisory";
+const SITE_TITLE = "Accusense Advisor — Chartered Accounting, Tax & Advisory";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

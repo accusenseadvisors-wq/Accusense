@@ -7,9 +7,9 @@ import CTA from "@/components/shared/CTA";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Accusense Advisors — Chartered Accounting, Tax & Advisory",
+  title: "Accusense Advisor — Chartered Accounting, Tax & Advisory",
   description:
-    "Accusense Advisors delivers expert accounting, bookkeeping, tax, advisory, and corporate services to help businesses manage finances, stay compliant, and grow with confidence.",
+    "Accusense Advisor delivers expert accounting, bookkeeping, tax, advisory, and corporate services to help businesses manage finances, stay compliant, and grow with confidence.",
   path: "/",
 });
 

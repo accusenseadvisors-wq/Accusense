@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Terms of Service",
-  description: "The terms that govern your use of the Accusense Advisors website and services.",
+  description: "The terms that govern your use of the Accusense Advisor website and services.",
   path: "/terms",
 });
 
@@ -32,7 +32,7 @@ export default function TermsPage() {
 
         <LegalSection heading="2. Use of This Website">
           <p>
-            This website is provided for general information about Accusense Advisors and our services.
+            This website is provided for general information about Accusense Advisor and our services.
             You agree to use it lawfully and not to misuse it, attempt to disrupt it, or copy its
             content without permission.
           </p>
@@ -49,7 +49,7 @@ export default function TermsPage() {
 
         <LegalSection heading="4. Intellectual Property">
           <p>
-            The Accusense Advisors name, logo, and the content, design, and layout of this website are
+            The Accusense Advisor name, logo, and the content, design, and layout of this website are
             our property and may not be reproduced without prior written consent.
           </p>
         </LegalSection>

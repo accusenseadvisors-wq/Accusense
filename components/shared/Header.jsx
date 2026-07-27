@@ -87,7 +87,7 @@ export default function Header() {
       <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center" onClick={closeMobile}>
-          <Image src={logo} alt="Accusense Advisors" priority className="h-16 md:h-20  w-auto" />
+          <Image src={logo} alt="Accusense Advisor" priority className="h-16 md:h-20  w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -182,7 +182,7 @@ export default function Header() {
           }`}
         >
           <div className="flex items-center justify-between border-b border-black/5 px-6 py-4">
-            <Image src={logo} alt="Accusense Advisors" className="h-16 w-auto" />
+            <Image src={logo} alt="Accusense Advisor" className="h-16 w-auto" />
             <button
               aria-label="Close menu"
               onClick={closeMobile}

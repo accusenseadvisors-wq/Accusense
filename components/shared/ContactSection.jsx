@@ -131,7 +131,7 @@ export default function ContactSection() {
             >
               <iframe
                 src="https://www.google.com/maps?q=Lahore,Pakistan&z=12&output=embed"
-                title="Accusense Advisors location — Lahore, Pakistan"
+                title="Accusense Advisor location — Lahore, Pakistan"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0 h-full w-full grayscale contrast-125 transition-all duration-500 hover:grayscale-0"
@@ -182,7 +182,7 @@ export default function ContactSection() {
                   <form ref={formRef} onSubmit={handleSubmit} className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                     <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
                     <input type="hidden" name="subject" value="New enquiry from the Accusense website" />
-                    <input type="hidden" name="from_name" value="Accusense Advisors Website" />
+                    <input type="hidden" name="from_name" value="Accusense Advisor Website" />
 
                     <label className="flex flex-col gap-2">
                       <span className="text-[12.5px] font-semibold text-[#1a1a1a]">First name</span>

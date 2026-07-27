@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: "How Accusense Advisors collects, uses, and protects your information.",
+  description: "How Accusense Advisor collects, uses, and protects your information.",
   path: "/privacy",
 });
 
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
       <LegalContent updated="15 July 2026">
         <LegalSection heading="1. Introduction">
           <p>
-            Accusense Advisors (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) provides accounting,
+            Accusense Advisor (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) provides accounting,
             bookkeeping, tax, advisory, and corporate services. This policy explains how we collect,
             use, and safeguard information when you visit accusenseadvisor.com or engage us as a client.
           </p>
