@@ -1,5 +1,6 @@
 import PageHero from "@/components/shared/PageHero";
 import OurStory from "@/components/about/OurStory";
+import OurName from "@/components/about/OurName";
 import WhyChooseUs from "@/components/shared/WhyChooseUs";
 import OurValues from "@/components/about/OurValues";
 import CTA from "@/components/shared/CTA";
@@ -27,6 +28,7 @@ export default function AboutPage() {
         description="We're Accusense — a chartered accounting practice built to do things properly: precise, transparent, and genuinely on your side."
       />
       <OurStory />
+      <OurName />
       <WhyChooseUs />
       <OurValues />
       <CTA

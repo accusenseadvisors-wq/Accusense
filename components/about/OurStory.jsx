@@ -45,7 +45,7 @@ const card = {
 
 export default function OurStory() {
   return (
-    <section className="py-24 lg:py-28">
+    <section className="pt-20 lg:pt-24">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial="hidden"
