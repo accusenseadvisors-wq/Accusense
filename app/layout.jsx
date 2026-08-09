@@ -100,7 +100,7 @@ const organizationSchema = {
     addressCountry: "PK",
   },
   areaServed: "PK",
-  // sameAs: ["https://linkedin.com", "https://x.com"],
+  sameAs: ["https://www.linkedin.com/company/accusense-advisor"],
   priceRange: "$$",
 };
 

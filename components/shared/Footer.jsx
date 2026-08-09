@@ -25,7 +25,7 @@ const useFullLinks = [
 ];
 
 const socials = [
-  // { label: "LinkedIn", icon: FaLinkedinIn, href: "https://linkedin.com" },
+  { label: "LinkedIn", icon: FaLinkedinIn, href: "https://www.linkedin.com/company/accusense-advisor" },
   // { label: "X", icon: FaXTwitter, href: "https://x.com" },
   { label: "Email", icon: FiMail, href: "mailto:contact@accusenseadvisor.com" },
 ];
