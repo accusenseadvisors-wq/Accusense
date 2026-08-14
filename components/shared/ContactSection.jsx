@@ -91,7 +91,7 @@ export default function ContactSection() {
                       <span className="mb-0.5 block text-[11.5px] font-semibold uppercase tracking-[0.12em] text-muted">
                         {channel.label}
                       </span>
-                      <span className="block text-[1.02rem] font-semibold text-[#1a1a1a]">{channel.value}</span>
+                      <span className="block text-[0.95rem] font-semibold text-[#1a1a1a]">{channel.value}</span>
                     </span>
                   </>
                 );
