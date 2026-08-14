@@ -4,6 +4,7 @@ import Footer from "@/components/shared/Footer";
 import SmoothScroll from "@/components/shared/SmoothScroll";
 import "./globals.css";
 import ScrollToTop from "@/components/shared/ScrollToTop";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/seo";
 
 const instrumentSans = Instrument_Sans({
@@ -122,6 +123,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
           <ScrollToTop />
+          <WhatsAppButton />
         </SmoothScroll>
       </body>
     </html>

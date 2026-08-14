@@ -3,11 +3,13 @@
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FiPhone, FiMail, FiMapPin, FiShield, FiArrowRight, FiCheck, FiAlertCircle } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 const channels = [
   { icon: FiPhone, label: "Call us", value: "0304 2024999", href: "tel:+923042024999" },
+  { icon: FaWhatsapp, label: "WhatsApp us", value: "0304 2024999", href: "https://wa.me/923042024999" },
   { icon: FiMail, label: "Email us", value: "contact@accusenseadvisor.com", href: "mailto:contact@accusenseadvisor.com" },
   { icon: FiMapPin, label: "Visit us", value: "Lahore, Pakistan", href: null },
 ];
